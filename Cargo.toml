@@ -1,0 +1,32 @@
+[package]
+name = "serde_example"
+version = "0.1.0"
+authors = ["Erick Tryzelaar <erick.tryzelaar@gmail.com>"]
+build = "build.rs"
+
+[features]
+default = ["serde_codegen"]
+nightly = ["serde_macros"]
+
+[build-dependencies]
+serde_codegen = { version = "*", optional = true }
+syntex = "*"
+
+[dependencies]
+serde = "*"
+serde_json = "*"
+serde_macros = { version = "*", optional = true }
+log = "*"
+
+
+#[build-dependencies]
+#syntex = { version = "*" }
+#syntex_syntax = { version = "*" }
+#serde_codegen = { version = "*", path = "../serde_codegen", features = ["with-syntex"] }
+
+#[dev-dependencies]
+#num = "*"
+#rustc-serialize = "*"
+#serde = { version = "*", path = "../serde" }
+#serde_json = { version = "*", path = "../serde_json" }
+#syntex = "*"
