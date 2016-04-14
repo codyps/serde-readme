@@ -1,4 +1,4 @@
-#[cfg_attr(features = "serde", derive(Serialize, Deserialize))]
+#[cfg_attr(features = "generate_serde", derive(Serialize, Deserialize))]
 #[derive(Debug)]
 struct Point {
     x: i32,

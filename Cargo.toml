@@ -5,8 +5,9 @@ authors = ["Erick Tryzelaar <erick.tryzelaar@gmail.com>"]
 build = "build.rs"
 
 [features]
-default = ["serde_codegen"]
+default = ["serde_codegen", "generate_serde"]
 nightly = ["serde_macros"]
+generate_serde = []
 
 [build-dependencies]
 serde_codegen = { version = "*", optional = true }
